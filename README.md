@@ -1,14 +1,9 @@
 # games
 
-Syncloud app: dedicated game server panel.
+Syncloud app: dedicated game server panel. Install it from the Syncloud store,
+pick a game from the catalog, and the server runs on your own device.
 
 Implements [syncloud/platform#35](https://github.com/syncloud/platform/issues/35) — SteamCMD + Pelican egg catalog.
-
-## Status
-
-**WIP, Phase 0.** Snap skeleton, stub catalog API, store-styled Vue frontend. No real install/start/stop yet.
-
-See commits on `wip` for the phased build-out (server CRUD → process management → SteamCMD → Pelican eggs → live console/rcon → A2S query → OIDC → backups).
 
 ## Architecture
 
@@ -23,7 +18,7 @@ See commits on `wip` for the phased build-out (server CRUD → process managemen
 
 - **amd64 only.** SteamCMD ships x86_64 binaries only.
 - **Steam accounts.** Most popular servers (CS2/TF2/Gmod/Valheim/Project Zomboid/ARK) work with `+login anonymous`. Rust/Squad/Arma 3 need a real Steam account — the UI surfaces an optional credentials field.
-- **Pelican eggs.** Best-effort: many upstream eggs assume Docker; we support the bash/native subset.
+- **Pelican eggs.** Best-effort: many upstream eggs assume Docker; we support the bash/native subset. A game that is not in the catalog is usually a day's work to add.
 
 ## Integration test fixture
 
