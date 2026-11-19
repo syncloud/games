@@ -1,6 +1,6 @@
 local name = 'games';
 local go = '1.25';
-local nginx = '1.24.0';
+local nginx = '1.30.7';
 local node = '20';
 local platform = '26.04.10';
 local python = '3.12-slim-bookworm';
